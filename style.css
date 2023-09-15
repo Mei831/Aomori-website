@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    background-color: bisque;
+}
+
+.logo {
+    height: 50px;
+}
+
+.header-left span{
+    color: black;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.carousel-item img{
+    height: 100vh;
+}
+
+.festival{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightgoldenrodyellow;
+}
+
+
+.festival-img{
+    height: 300px;
+}
+
+@media screen and (max-width:780px){
+    .festival-img {
+        flex-direction: column;
+    }
+}
+
+.section-left{
+    text-align: center;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.section-right{
+    text-align: center;
+    font-family: serif;
+    font-weight: 500;
+}
+
+.section-left p{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.section-right p{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.description{
+    font-family: serif;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.button010 a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    transform: skew(-15deg);
+    color: #fff;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f57f2a), to(#fde800));
+    background-image: -webkit-linear-gradient(left,#f57f2a 0%, #fde800 100%);
+    background-image: linear-gradient(90deg,#f57f2a 0%, #fde800 100%);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+.button010 a:hover {
+  -webkit-transform: skew(0);
+  transform: skew(0);
+  color: #fff;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+}
+
+.btn a {   
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    transform: skew(-15deg);
+    color: #fff;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fde800), to(#ef95e9));
+    background-image: -webkit-linear-gradient(left, #fde800 0%, #ef95e9 100%);
+    background-image: linear-gradient(90deg, #fde800 0%, #ef95e9 100%);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    }
+    .btn a:hover {
+      -webkit-transform: skew(0);
+      transform: skew(0);
+      color: #fff;
+      -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+    }
+    
+    .food h1{
+        font-family: serif;
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .food p{
+        text-align: center;
+        font-family: serif;
+        padding-bottom: 3%;
+        padding-top: 2%;
+    }
+    
+
+    .ranking {
+        counter-reset: rank;
+        display: flex;
+        justify-content: space-around;
+    }
+      
+    .ranking li {
+        position: relative;
+        list-style: none;
+    }
+      
+    .ranking li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+      
+    .ranking li:nth-child(-n + 3)::before { /* 王冠のスタイル */
+        font-family: "Font Awesome 5 Free";
+        content: "\f521";
+        font-weight: 900;
+        position: absolute;
+        top: -45px; /* 王冠の位置（縦軸） */
+        left: -20px; /* 王冠の位置（横軸） */
+        font-size: 80px; /* 王冠の大きさ */
+    }
+      
+    .ranking li:nth-child(1)::before { /* 1位（王冠）のスタイル */
+        color: #e6c300;
+    }
+      
+    .ranking li:nth-child(2)::before { /* 2位（王冠）のスタイル */
+        color: #a9a9a9;
+    }
+      
+    .ranking li:nth-child(3)::before { /* 3位（王冠）のスタイル */
+        color: #815a2b;
+    }
+      
+    .ranking li:nth-child(n + 4)::before { /* 3位以下のスタイル */
+        content: "";
+        position: absolute;
+        border-bottom: 100px solid transparent;
+        border-left: 100px solid rgba(0,0,0,0.8);
+    }
+      
+    .ranking li::after { /* 順位（文字）のスタイル */
+        counter-increment: rank;
+        content: counter(rank) " 位";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1.2em;
+        color: #fff;
+        font-family: serif;
+    }
+      
+    .ranking img { /* 画像のスタイル */
+        width: 350px;
+        height: 200px;
+        object-fit: cover;
+    }
+      
+      .ranking p { /* タイトルのスタイル */
+        position: absolute;
+        bottom: 0;
+        width: 350px; /* 画像の横幅に合わせる*/
+        padding-right: 10px;
+        color: #fff;
+        background: rgba(0,0,0,0.8);
+        text-align: right;
+    }
+
+    .ranking{
+       font-size: larger;
+       padding-bottom: 3%;
+    }
+
+    
+    
+
+    footer p {
+       font-family: serif;
+       font-size: 20px;
+        background-color: bisque;
+        margin-bottom: 0;
+        font-family: fantasy;
+        height: 40px;
+        text-align: right;
+    }
+
+   
+
+      
+
+
